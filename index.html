@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anjali Gedam | Data Scientist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+  /* Global Styles */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: #c9d1d9;
+  }
+
+  a {
+    color: #58a6ff;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #58a6ff;
+  }
+
+  h2 {
+    color: #58a6ff;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 0.3rem;
+  }
+
+  h3 {
+    margin-top: 1rem;
+    color: #8b949e;
+  }
+
+  /* Navigation */
+  nav {
+    background-color: #161b22;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    margin-right: 1.5rem;
+  }
+
+  nav a {
+    font-weight: bold;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    padding: 6rem 2rem;
+  }
+header {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  color: white;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 30px;
+  background-color: rgba(0, 0, 0, 0.4); /* optional overlay for text visibility */
+  height: 100%;
+}
+
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+   
+    z-index: 0;
+  }
+.header-content h1 {
+  font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+  font-weight: bold;
+  color: white;
+  font-size: 3rem;
+}
+
+.header-content h3 {
+  font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+  font-weight: bold;
+  color: white;
+  font-size: 1.8rem;
+}
+
+  header h1, header h3, header .contact-buttons {
+    position: relative;
+    z-index: 1;
+  }
+
+
+  /* Section Wrapper */
+  section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .about-wrapper {
+  display: flex;
+  flex-direction: row; /* explicitly set */
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.section-content {
+  flex: 1 1 60%;
+  min-width: 300px;
+}
+
+.about-image {
+  flex: 0 0 auto;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #58a6ff;
+  margin-top: 2rem;
+}
+
+
+  @media (max-width: 768px) {
+    .about-wrapper {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-text {
+      width: 100%;
+    }
+  }
+
+  #experience .section-content p,
+#experience .section-content ul {
+  text-align: justify;
+}
+
+.company-name {
+  color: #dcd7d7;
+  margin-bottom: 0.3rem;
+}
+
+.position-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.position {
+  font-weight: bold;
+}
+
+.date {
+  font-style: italic;
+  color: #afacac;
+}
+
+.experience-item ul {
+  padding-left: 1.2rem;
+  margin-top: 0;
+  text-align: justify;
+
+}
+
+  /* Skills Section */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skills-column {
+    background-color: #161b22;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+  }
+
+  .skills-column:hover {
+    transform: scale(1.03);
+    background-color: #1f2733;
+  }
+
+  .skills-column h3 {
+    margin-bottom: 0.5rem;
+    color: #58a6ff;
+  }
+
+  /* Projects - Flip Cards */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .flip-card {
+    perspective: 1000px;
+    background-color: transparent;
+  }
+
+  .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+  .flip-card:hover {
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.4);
+  border-radius: 12px;
+}
+
+
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.6);
+  }
+
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    border-radius: 12px;
+    background-color: #161b22;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .flip-card-front {
+    color: #58a6ff;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+    color: #c9d1d9;
+    font-size: 0.95rem;
+    overflow-y: auto;
+    line-height: 1.4;
+  }
+
+  /* Contact & Footer */
+  .social-icons a {
+    margin-right: 15px;
+    color: #58a6ff;
+    font-size: 1.5rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #30363d;
+    color: #8b949e;
+  }
+</style>
+
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+     <div class="slider">
+    <img src="https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg" class="slide active">
+    <img src="https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg" class="slide">
+    <img src="https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg" class="slide">
+  </div>
+   <div class="header-content">
+    <h1>A N J A L I &nbsp;&nbsp;
+ G E D A M</h1>
+    <h3>D A T A&nbsp;
+&nbsp;
+ S C I E N T I S T</h3>
+    </div>
+  </header>
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 3000); // 3 seconds
+</script>
+
+  <!-- ✅ Updated About Section -->
+  <section class="section" id="about">
+    <h2>P R O F I L E</h2>
+    <div class="about-wrapper">
+      <div class="section-content">
+    <p style="text-align: justify;">
+      Hello! I am Anjali Gedam, a passionate and detail-driven Data Scientist and Software Developer with a background in data analytics, machine learning, and full-stack development. Recently completed my post graduation in Master’s in Data Science at the University of Glasgow, I combine technical expertise with a creative problem-solving mindset to build impactful, data-driven solutions.
+    </p>
+    <p style="text-align: justify;">
+      With hands-on experience in Python, SQL, Power BI, Tableau, AWS, and TensorFlow, I have worked on projects ranging from predictive modeling and generative AI to web development and information retrieval systems. My industry experience includes roles in data analytics, AI evaluation, and backend automation, where I contributed to real-world business insights and efficiency gains.
+    </p>
+    <p style="text-align: justify;">
+      Beyond academic and professional work, I have volunteered with Humari Pehchan NGO, served as a regional-level athlete, and led sports and cultural teams—bringing a unique blend of discipline, leadership, and creativity to everything I do.
+    </p>
+    <p style="text-align: justify;">
+      I’m passionate about ethical AI, scalable data systems, and leveraging technology for positive change. Whether it is solving complex data problems or designing user-friendly applications, I aim to create solutions that are both meaningful and efficient.
+    </p>
+  </div>
+      <div class="about-image">
+        <img src="C:/Users/intel/OneDrive/Desktop/photo.jpg" alt="Anjali Gedam" />
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="section" id="skills">
+    <h2>S K I L L S</h2>
+    <div class="section-content">
+      <div class="skills-grid">
+        <div class="skills-column"><h3>Programming Languages</h3><p>Python, R, SQL, NoSQL, C, C++, HTML, CSS</p></div>
+        <div class="skills-column"><h3>Data Analysis</h3><p>Pandas, NumPy</p></div>
+        <div class="skills-column"><h3>Data Visualization</h3><p>Matplotlib, Seaborn, Plotly</p></div>
+        <div class="skills-column"><h3>Machine Learning</h3><p>Scikit-learn, XGBoost</p></div>
+        <div class="skills-column"><h3>Deep Learning</h3><p>TensorFlow, Keras, PyTorch</p></div>
+        <div class="skills-column"><h3>NLP</h3><p>spaCy, NLTK, Hugging Face</p></div>
+        <div class="skills-column"><h3>BI Tools</h3><p>Power BI, Tableau, Looker, Excel, Google Data Studio</p></div>
+        <div class="skills-column"><h3>Cloud & Big Data</h3><p>AWS, Azure, Snowflake</p></div>
+        <div class="skills-column"><h3>Databases</h3><p>MySQL, PostgreSQL</p></div>
+        <div class="skills-column"><h3>MLOps</h3><p>Airflow, MLflow</p></div>
+        <div class="skills-column"><h3>Information Retrieval</h3><p>BM25, ElasticSearch, PyTerrier</p></div>
+        <div class="skills-column"><h3>Professional Skills</h3><p>Teamwork, API Integration, Software Development</p></div>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="section" id="experience">
+  <h2>E X P E R I E N C E</h2>
+  <div class="section-content">
+
+    <!-- Experience 1 -->
+    <div class="experience-item" style="margin-bottom: 2rem;">
+      <h3 class="company-name">Anishree Technologies LLP, India</h3>
+      <div class="position-date">
+        <span class="position">Data Analyst</span>
+        <span class="date">Nov 2023 – Present</span>
+      </div>
+      <ul>
+        <li>Designed and implemented interactive reports and performance monitoring systems using Power BI, Excel, and Python, enabling leadership to make data-driven decisions based on real-time insights into sales, inventory, and market trends.</li>
+        <li>Automated business-critical processes—such as employee time tracking, report generation, and incentive calculation—through Python scripting and email bots, increasing team efficiency by over 40% and significantly reducing manual intervention.</li>
+        <li>Built time series forecasting models to predict goods pricing trends, empowering procurement teams to optimize stock purchasing decisions and improve overall financial outcomes.</li>
+        <li>Delivered 20+ customized reports and analytical tools using Python, SQL, and Snowflake; collaborated in Agile teams to streamline ETL pipelines, integrate automated workflows with CI/CD practices, and support leadership with actionable insights on performance, logistics, and sales KPIs.</li>
+      </ul>
+    </div>
+
+    <!-- Experience 2 -->
+    <div class="experience-item">
+      <h3 class="company-name">SSIT Pvt. Ltd., India</h3>
+      <div class="position-date">
+        <span class="position">Data Analyst</span>
+        <span class="date">Jul 2022 – Aug 2023</span>
+      </div>
+      <ul>
+        <li>Designed and delivered over 20 dynamic reports using Power BI, Excel, and Python to help leadership track daily, monthly, quarterly, and annual sales and inventory trends, supporting informed strategic planning and resource optimization.</li>
+        <li>Led in-depth analysis of course sales, user engagement, and feedback data using SQL, Excel, and Python, which enabled timely event promotions, resulting in a 20% increase in sales and a 25% improvement in participant satisfaction.</li>
+        <li>Conducted detailed ROI analysis on marketing initiatives—including code camps, webinars, and email campaigns—using Power BI, Pandas, and Python, identifying high-performing channels that increased conversion rates and improved marketing spend efficiency.</li>
+        <li>Collaborated cross-functionally to translate complex datasets into actionable business intelligence, aligning marketing, sales, and content strategy with company goals and enhancing leadership’s ability to make data-driven decisions.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+  
+  <section class="section" id="education">
+  <h2>E D U C A T I O N</h2>
+  <div class="section-content">
+
+  <!-- MSc Data Science -->
+<div class="education-item" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+  <div style="width: 100%;">
+    <h3 style="margin-bottom: 0.2rem;">Master of Science in Data Science</h3>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 0.2rem;">
+      <p style="margin: 0;">University of Glasgow, United Kingdom</p>
+      <p style="margin: 0; text-align: right;"><em>Sep 2023 – Sep 2024</em></p>
+    </div>
+    <p style="color: #8b949e; font-size: 0.9rem; line-height: 1.3; ">
+      
+          Relevant Coursework: Data Analysis, Deep Learning, Machine Learning, Natural Language Processing (NLP), Generative AI, Information Visualization, Big Data, Information Retrieval, Software Development, Web Science, Human-Centered Security, Artificial Intelligence, Python, SQL, Web Scraping, Research Skills
+        </p>
+      </div>
+      
+    </div>
+
+    <!-- B.Tech CSE -->
+<div class="education-item" style="display: flex; justify-content: space-between; flex-wrap: wrap; ">
+  <div style="width: 100%;">
+    <h3 style="margin-bottom: 0.2rem;">Bachelor of Technology in Information Technology</h3>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 0.2rem;">
+      <p style="margin: 0;">Nagpur University, India</p>
+      <p style="margin: 0; text-align: right;"><em>Aug 2018 – Jul 2022</em></p>
+    </div>
+    <p style="color: #8b949e; font-size: 0.9rem; line-height: 1.3;">
+      
+      Relevant Coursework: Database Management System (DBMS), C, C++, SQL, Core Java, Python, MATLAB, Unix, Linux, Shell Scripting, Object-Oriented Programming (OOP), Object-Oriented Modelling (OOM), Web Development, Data Structures, Algorithm Design & Development, Artificial Intelligence (AI), Machine Learning (ML), Ethical Computing, Networking, Computer Architecture, Physics, Mathematics (Statistics, Probability, Calculus, Algebra), Civil Engineering Basics, Electrical Engineering Basics, Chemistry
+    </p>
+  </div>
+</div>
+
+
+    <!-- Class XII -->
+    <div class="education-item" style="display: flex; justify-content: space-between; flex-wrap: wrap; ">
+  <div style="width: 100%;">
+    <h3 style="margin-bottom: 0.2rem;">High School</h3>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 0.2rem;">
+      <p style="margin: 0;">Kendriya Vidyalaya, India</p>
+      <p style="margin: 0; text-align: right;"><em>May 2018</em></p>
+    </div>
+    <p style="color: #8b949e; font-size: 0.9rem; line-height: 1.3;">
+      
+      Relevant Coursework: English, Hindi, Mathematics, Chemistry, Physics, Sanskrit, Social Science, Computer Science, SQL, Networking, Biology
+    </p>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+  <section class="section" id="certifications">
+  <h2>C E R T I F I C A T I O N S</h2>
+  <div class="section-content">
+    <ul style="list-style: none; padding: 0;">
+      <li style="margin-bottom: 1.5rem;">
+        <strong>Python</strong><br/>
+        <div style="display: flex; justify-content: space-between;">
+          <span>NPTEL – Indian Institute of Technology Madras, India</span>
+          <span><em>Jul 2021 – Sep 2021</em></span>
+        </div>
+      </li>
+
+      <li style="margin-bottom: 1.5rem;">
+        <strong>Data Science</strong><br/>
+        <div style="display: flex; justify-content: space-between;">
+          <span>NPTEL – Indian Institute of Technology Madras, India</span>
+          <span><em>Jul 2021 – Aug 2021</em></span>
+        </div>
+      </li>
+
+      <li>
+        <strong>Data Scientist Master’s Program</strong><br/>
+        <div style="display: flex; justify-content: space-between;">
+          <span>Simplilearn (in collaboration with IBM)</span>
+          <span><em>Aug 2022 – Jan 2024</em></span>
+          
+        </div>
+      </li>
+    </ul>
+    <p style="color: #8b949e; font-size: 0.9rem; line-height: 1.3; margin: 0;">
+      Relevant Coursework: Python, Data Science, Machine Learning, Deep Learning, Keras, TensorFlow, SQL, R Programming, Tableau, Capstone Project, Mathematics, Statistics, Algebra, Probability
+    </p>
+  </div>
+</section>
+
+
+
+  <section id="projects">
+  <h2>P R O J E C T S</h2>
+  <div class="projects-grid">
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          Online Book & Magazine Management Systems
+        </div>
+        <div class="flip-card-back">
+          <p><strong>HTML, CSS, JavaScript, PHP, Bootstrap</strong> <br><br>
+          Developed user login, PDF downloads, and admin panels for digital library platforms.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          Secure Data Deduplication Platform
+        </div>
+        <div class="flip-card-back">
+          <p><strong>Python</strong><br><br>
+          File deduplication system with hashing & encryption for secure, efficient storage.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          FairRank – Fairness-Aware Re-Ranking
+        </div>
+        <div class="flip-card-back">
+          <p><strong>PyTerrier, Python, ELECTRA, BM25</strong><br><br>
+          Re-ranked search results on TREC dataset to enhance fairness.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          Big Data Text Search Engine
+        </div>
+        <div class="flip-card-back">
+          <p><strong>Apache Spark, Java</strong><br><br>
+          Built scalable text ranking engine using Spark DPH models.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          Histopathological Image Clustering
+        </div>
+        <div class="flip-card-back">
+          <p><strong>ResNet50, PathologyGAN, PCA, UMAP</strong><br><br>
+          Cancer image clustering with K-Means, GMM, Louvain, silhouette score.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          EEG-Based Neuropathic Pain Prediction
+        </div>
+        <div class="flip-card-back">
+          <p><strong> SVM, KNN, PCA</strong><br><br>
+          Used EEG features with ML and regularization for pain detection.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          Data Visualization with Altair
+        </div>
+        <div class="flip-card-back">
+          <p><strong>Python, Altair</strong><br><br>
+          Built dashboards on US Accidents data with filters and metrics.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          COVID-19 Time Series Forecasting
+        </div>
+        <div class="flip-card-back">
+          <p><strong>Python, Facebook Prophet</strong><br><br>
+          Forecasted COVID trends with Prophet and visualizations.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          Protein Secondary Structure Prediction
+        </div>
+        <div class="flip-card-back">
+          <p><strong>PyTorch, FCN, Captum</strong><br><br>
+          Built interpretable FCN with PSSM inputs and Ray Tune optimization.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          Geo-Spatial Twitter Data Analysis
+        </div>
+        <div class="flip-card-back">
+          <p><strong> Python</strong><br><br>
+          Geo-tagged tweet classification using spatial bins and ML models.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          ShareBike EV Rental Management
+        </div>
+        <div class="flip-card-back">
+          <p><strong>Python (Tkinter), SQLite</strong><br><br>
+          Built EV rental desktop app with login, fare calculation and booking features.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          Thermal & Shoulder Surfing Attack Study
+        </div>
+        <div class="flip-card-back">
+          <p><strong> Python(matplotlib), Research</strong><br><br>
+          Studied mobile security threats using thermal imagery and observational analysis.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <section class="section" id="contact">
+    <h2>C O N T A C T</h2>
+    <div class="section-content">
+    <p>
+      <i class="fas fa-envelope"></i>  
+      <a href="mailto:anjaligedam05@gmail.com">anjaligedam05@gmail.com</a>
+    </p>
+    
+    <p>
+      <i class="fas fa-phone"></i> 
+      <a href="tel:+447774722251">+44 7774722251</a>
+    </p>
+    <div class="social-icons">
+      <!-- HackerRank -->
+      <a href="https://www.hackerrank.com/profile/anjaligedam05" target="_blank" title="HackerRank">
+        <i class="fab fa-hackerrank"></i>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/anjli20" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/anjali-gedam-4071ab181/" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/anjali.gedam.56/" target="_blank" title="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/anjli_20_/" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Anjali Gedam | All rights reserved.</p>
+  </footer>
+</body>
+</html>
