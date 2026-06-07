@@ -3,64 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anjali Gedam | Data Analyst</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <title>Anjali Gedam</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <style>
-  /* Global Styles */
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #000000;
-    color: #c9d1d9;
-  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; background-color:#000; color:#e6edf3; font-size:17px; }
+  a { color:#58a6ff; text-decoration:none; }
+  h2 { color:#58a6ff; border-bottom:1px solid #30363d; padding-bottom:0.4rem; font-size:1.6rem; margin-bottom:1.4rem; }
 
-  a {
-    color: #58a6ff;
-    text-decoration: none;
-  }
+  /* ── Nav ── */
+  nav { background-color:#161b22; padding:1rem; position:sticky; top:0; z-index:1000; }
+  nav ul { list-style:none; display:flex; flex-wrap:wrap; margin:0; padding:0; }
+  nav li { margin-right:1.5rem; }
+  nav a { font-weight:bold; font-size:1rem; color:#c9d1d9; padding:0.3rem 0.5rem; border-radius:5px; transition:color 0.2s, background 0.2s; cursor:pointer; display:inline-block; }
+  nav a:hover, nav a.active { color:#58a6ff; background:rgba(88,166,255,0.1); }
 
-  h1 {
-    font-size: 3rem;
-    color: #58a6ff;
-  }
-
-  h2 {
-    color: #58a6ff;
-    border-bottom: 1px solid #30363d;
-    padding-bottom: 0.3rem;
-  }
-
-  h3 {
-    margin-top: 1rem;
-    color: #8b949e;
-  }
-
-  /* Navigation */
-  nav {
-    background-color: #161b22;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav li {
-    margin-right: 1.5rem;
-  }
-
-  nav a {
-    font-weight: bold;
-  }
-
-  /* Header */
+  /* ── Header ── */
   header {
     text-align: center;
     background-image: url('https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg');
@@ -68,617 +27,594 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    height: 200px;
+    overflow: hidden;
     color: white;
-    padding: 6rem 2rem;
   }
-header {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-  color: white;
-}
-
-.slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.header-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding-top: 30px;
-  background-color: rgba(0, 0, 0, 0.4); /* optional overlay for text visibility */
-  height: 100%;
-}
-
-  header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-   
-    z-index: 0;
-  }
-.header-content h1 {
-  font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
-  font-weight: bold;
-  color: white;
-  font-size: 3rem;
-}
-
-.header-content h3 {
-  font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
-  font-weight: bold;
-  color: white;
-  font-size: 1.8rem;
-}
-
-  header h1, header h3, header .contact-buttons {
+  .slider { position:absolute; width:100%; height:100%; top:0; left:0; }
+  .slide { position:absolute; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity 1s ease-in-out; }
+  .slide.active { opacity:1; }
+  header::before { content:""; position:absolute; top:0; left:0; height:100%; width:100%; z-index:0; }
+  .header-content {
     position: relative;
     z-index: 1;
-  }
-
-
-  /* Section Wrapper */
-  section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-
-  .about-wrapper {
-  display: flex;
-  flex-direction: row; /* explicitly set */
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.section-content {
-  flex: 1 1 60%;
-  min-width: 300px;
-}
-
-.about-image {
-  flex: 0 0 auto;
-}
-
-.about-image img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #58a6ff;
-  margin-top: 2rem;
-}
-
-
-  @media (max-width: 768px) {
-    .about-wrapper {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .about-text {
-      width: 100%;
-    }
-  }
-
-  #experience .section-content p,
-#experience .section-content ul {
-  text-align: justify;
-}
-
-.company-name {
-  color: #dcd7d7;
-  margin-bottom: 0.3rem;
-}
-
-.position-date {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-
-.position {
-  font-weight: bold;
-}
-
-.date {
-  font-style: italic;
-  color: #afacac;
-}
-
-.experience-item ul {
-  padding-left: 1.2rem;
-  margin-top: 0;
-  text-align: justify;
-
-}
-
-  /* Skills Section */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .skills-column {
-    background-color: #161b22;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease;
-  }
-
-  .skills-column:hover {
-    transform: scale(1.03);
-    background-color: #1f2733;
-  }
-
-  .skills-column h3 {
-    margin-bottom: 0.5rem;
-    color: #58a6ff;
-  }
-
-  /* Projects - Flip Cards */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .flip-card {
-    perspective: 1000px;
-    background-color: transparent;
-  }
-
-  .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 150px;
-  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transform-style: preserve-3d;
-}
-  .flip-card:hover {
-  box-shadow: 0 0 20px rgba(88, 166, 255, 0.4);
-  border-radius: 12px;
-}
-
-
-  .flip-card:hover .flip-card-inner,
-  .flip-card:focus-within .flip-card-inner {
-    transform: rotateY(180deg);
-    box-shadow: 0 0 15px rgba(88, 166, 255, 0.6);
-  }
-
-
-  .flip-card-front,
-  .flip-card-back {
-    position: absolute;
-    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
-    padding: 0.5rem;
-    border-radius: 12px;
-    background-color: #161b22;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
+  .header-content h1 { font-family:'Copperplate','Copperplate Gothic Light',fantasy; font-weight:bold; color:white; font-size:3rem; margin:0 0 0.1rem; }
+  .header-content h3 { font-family:'Copperplate','Copperplate Gothic Light',fantasy; font-weight:bold; color:white; font-size:1.8rem; margin:0 0 0.5rem; }
+  .social-icons { display:flex; align-items:center; justify-content:center; }
+  .social-icons a { margin-right:15px; color:#ffffff; font-size:1.5rem; line-height:1; transition:color 0.2s, transform 0.2s; display:inline-block; }
+  .social-icons a:hover { color:#58a6ff; transform:scale(1.25); }
 
-  .flip-card-front {
-    color: #58a6ff;
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
+  /* ── SPA Pages ── */
+  .page { display:none; max-width:1100px; margin:0 auto; padding:2.5rem 2rem; }
+  .page.active { display:block; }
 
-  .flip-card-back {
-    transform: rotateY(180deg);
-    color: #c9d1d9;
-    font-size: 0.95rem;
-    overflow-y: auto;
-    line-height: 1.4;
-  }
+  /* ── About / Profile ── */
+  .about-wrapper { display:flex; flex-direction:row; align-items:flex-start; gap:2.5rem; flex-wrap:wrap; }
+  .about-text { flex:1 1 60%; min-width:280px; }
+  .about-text .greeting { font-size:1.6rem; font-weight:700; color:#ffffff; margin:0 0 0.6rem; }
+  .about-text .intro { font-size:1.15rem; line-height:1.85; color:#e6edf3; margin:0 0 1.2rem; }
+  .about-text .activities-label { font-size:1.05rem; color:#e6edf3; margin:0 0 0.5rem; }
+  .about-text .activities { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .about-text .activities li { font-size:1.1rem; color:#e6edf3; padding:0.3rem 0; display:flex; align-items:center; gap:0.6rem; }
+  .about-text .activities li::before { content:"✦"; color:#58a6ff; font-size:0.75rem; flex-shrink:0; }
+  .about-text .quote { font-size:1.1rem; font-style:italic; color:#58a6ff; border-left:3px solid #58a6ff; padding-left:1rem; margin:0; line-height:1.75; }
+  .about-text .quote-name { font-size:1rem; font-style:normal; font-weight:700; color:#e6edf3; display:block; margin-top:0.5rem; }
+  .about-image img { width:210px; height:210px; object-fit:cover; border-radius:50%; border:4px solid #58a6ff; }
+  @media(max-width:700px){ .about-wrapper { flex-direction:column; align-items:center; text-align:center; } }
 
-  /* Contact & Footer */
-  .social-icons a {
-    margin-right: 15px;
-    color: #58a6ff;
-    font-size: 1.5rem;
-  }
+  /* ── Skills ── */
+  .skills-section-heading { font-size:1.05rem; font-weight:700; color:#58a6ff; text-transform:uppercase; letter-spacing:0.08em; margin:2rem 0 0.9rem; padding-bottom:0.3rem; border-bottom:1px solid #30363d; }
+  .skills-icon-grid { display:flex; flex-wrap:wrap; gap:0.85rem; margin-bottom:0.5rem; }
+  .skill-pill { display:flex; align-items:center; gap:0.55rem; background-color:#161b22; border:1px solid #30363d; border-radius:10px; padding:0.55rem 1rem; font-size:1rem; color:#e6edf3; transition:transform 0.2s, border-color 0.2s, box-shadow 0.2s; cursor:default; }
+  .skill-pill:hover { transform:translateY(-3px); border-color:#58a6ff; box-shadow:0 4px 14px rgba(88,166,255,0.18); }
+  .skill-pill img { width:24px; height:24px; object-fit:contain; }
+  .skill-pill i { font-size:1.4rem; line-height:1; }
 
-  footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid #30363d;
-    color: #8b949e;
-  }
-</style>
+  /* ── Experience ── */
+  .exp-group-label { font-size:0.9rem; font-weight:700; color:#58a6ff; text-transform:uppercase; letter-spacing:0.1em; margin:2rem 0 0.9rem; padding-bottom:0.3rem; border-bottom:1px solid #30363d; }
+  .exp-grid { display:flex; flex-direction:column; gap:1.1rem; }
+  .exp-card { background-color:#161b22; border:1px solid #30363d; border-radius:14px; padding:1.2rem 1.5rem; display:flex; align-items:center; gap:1.4rem; transition:transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
+  .exp-card:hover { transform:translateY(-3px); box-shadow:0 6px 20px rgba(88,166,255,0.15); border-color:#58a6ff; }
+  .exp-logo { width:68px; height:68px; border-radius:10px; object-fit:contain; background:#ffffff; padding:7px; flex-shrink:0; }
+  .exp-logo-placeholder { width:68px; height:68px; border-radius:10px; background:#ffffff; display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#58a6ff; font-size:1.6rem; }
+  .exp-info { display:flex; flex-direction:column; gap:0.2rem; }
+  .exp-role { font-size:1.1rem; font-weight:700; color:#ffffff; margin:0; }
+  .exp-company { font-size:0.95rem; color:#58a6ff; margin:0; }
+  .exp-desc { font-size:0.92rem; color:#e6edf3; margin:0.3rem 0 0; line-height:1.65; }
 
+  /* ── Education + Certifications ── */
+  .cert-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.8rem; margin-top:1.2rem; }
+  .cert-card { background-color:#161b22; border-radius:14px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.4); transition:transform 0.25s, box-shadow 0.25s; display:flex; flex-direction:column; }
+  .cert-card:hover { transform:translateY(-5px); box-shadow:0 8px 28px rgba(88,166,255,0.2); }
+  .cert-image-wrap { width:100%; height:200px; background-color:#0d1117; overflow:hidden; cursor:zoom-in; position:relative; }
+  .cert-image-wrap img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s; }
+  .cert-card:hover .cert-image-wrap img { transform:scale(1.04); }
+  .cert-image-wrap::after { content:"\f00e"; font-family:"Font Awesome 6 Free"; font-weight:900; position:absolute; bottom:8px; right:10px; color:rgba(255,255,255,0.7); font-size:1rem; pointer-events:none; opacity:0; transition:opacity 0.25s; }
+  .cert-image-wrap:hover::after { opacity:1; }
+  .cert-body { padding:1.1rem 1.2rem 1.3rem; flex:1; display:flex; flex-direction:column; gap:0.3rem; }
+  .cert-title { font-size:1.05rem; font-weight:700; color:#ffffff; margin:0; }
+  .cert-issuer { font-size:0.92rem; color:#e6edf3; margin:0; }
+  .cert-date { font-size:0.88rem; color:#c9d1d9; font-style:italic; margin:0; }
+  .cert-coursework { font-size:0.88rem; color:#e6edf3; line-height:1.55; margin-top:0.5rem; border-top:1px solid #30363d; padding-top:0.5rem; }
+
+  /* ── Projects ── */
+  .projects-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+  @media(max-width:900px){ .projects-grid { grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:580px){ .projects-grid { grid-template-columns:1fr; } }
+  .project-card { background-color:#161b22; border-radius:12px; border:1px solid #30363d; box-shadow:0 2px 8px rgba(0,0,0,0.4); display:flex; flex-direction:column; transition:transform 0.25s, box-shadow 0.25s, border-color 0.25s; overflow:hidden; cursor:pointer; text-decoration:none; color:inherit; }
+  .project-card:hover { transform:translateY(-5px); box-shadow:0 8px 28px rgba(88,166,255,0.2); border-color:#58a6ff; }
+  .project-card-header { padding:1.1rem 1.2rem 0.6rem; display:flex; align-items:flex-start; gap:0.7rem; }
+  .project-card-header i { color:#58a6ff; font-size:1.1rem; margin-top:0.15rem; flex-shrink:0; }
+  .project-title { font-size:1.05rem; font-weight:700; color:#58a6ff; margin:0; line-height:1.4; }
+  .project-desc { padding:0 1.2rem 0.8rem; font-size:0.95rem; color:#e6edf3; line-height:1.65; flex:1; }
+  .project-footer { padding:0.6rem 1.2rem 1rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; border-top:1px solid #30363d; }
+  .project-tags { display:flex; flex-wrap:wrap; gap:0.4rem; }
+  .project-tag { background-color:rgba(88,166,255,0.1); color:#58a6ff; font-size:0.78rem; padding:0.2rem 0.55rem; border-radius:20px; border:1px solid rgba(88,166,255,0.25); font-weight:600; }
+  .project-gh-link { display:inline-flex; align-items:center; gap:0.3rem; font-size:0.88rem; color:#c9d1d9; font-weight:600; white-space:nowrap; transition:color 0.2s; }
+  .project-card:hover .project-gh-link { color:#58a6ff; }
+
+  /* ── Lightbox ── */
+  .lightbox { display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); align-items:center; justify-content:center; padding:1.5rem; cursor:zoom-out; }
+  .lightbox.open { display:flex; }
+  .lightbox img { max-width:90vw; max-height:88vh; border-radius:10px; box-shadow:0 0 60px rgba(88,166,255,0.3); animation:lbZoom 0.25s cubic-bezier(0.22,1,0.36,1); cursor:default; }
+  @keyframes lbZoom { from{transform:scale(0.85);opacity:0} to{transform:scale(1);opacity:1} }
+  .lightbox-close { position:fixed; top:1.2rem; right:1.4rem; color:#fff; font-size:2rem; cursor:pointer; opacity:0.8; transition:opacity 0.2s; z-index:10000; }
+  .lightbox-close:hover { opacity:1; }
+
+  footer { text-align:center; padding:2rem; border-top:1px solid #30363d; color:#c9d1d9; font-size:0.95rem; }
+  </style>
 </head>
 <body>
+
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a class="nav-link active" data-page="about">Home</a></li>
+      <li><a class="nav-link" data-page="skills">Skills</a></li>
+      <li><a class="nav-link" data-page="experience">Experience</a></li>
+      <li><a class="nav-link" data-page="education">Education</a></li>
+      <li><a class="nav-link" data-page="certifications">Certifications</a></li>
+      <li><a class="nav-link" data-page="projects">Projects</a></li>
     </ul>
   </nav>
 
   <header>
-     <div class="slider">
-    <img src="https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg" class="slide active">
-    <img src="https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg" class="slide">
-    <img src="https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg" class="slide">
-  </div>
-   <div class="header-content">
-    <h1>A N J A L I &nbsp;&nbsp;
- G E D A M</h1>
-    <h3>D A T A&nbsp;
-&nbsp;
- A N A L Y S T</h3>
-    
-    <div class="social-icons">
-      <!-- HackerRank -->
-      <a href="https://www.hackerrank.com/profile/anjaligedam05" target="_blank" title="HackerRank">
-        <i class="fab fa-hackerrank"></i>
-      </a>
-
-      <!-- GitHub -->
-      <a href="https://github.com/anjli20" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/anjali-gedam-4071ab181/" target="_blank" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/anjali.gedam.56/" target="_blank" title="Facebook">
-        <i class="fab fa-facebook"></i>
-      </a>
-
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/anjli_20_/" target="_blank" title="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
+    <div class="slider">
+      <img src="https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg" class="slide active">
+      <img src="https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg" class="slide">
+      <img src="https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg" class="slide">
     </div>
+    <div class="header-content">
+      <h1>A N J A L I &nbsp;&nbsp; G E D A M</h1>
+      <h3>D A T A &nbsp; S C I E N T I S T</h3>
+      <div class="social-icons">
+        <a href="https://www.hackerrank.com/profile/anjaligedam05" target="_blank" title="HackerRank"><i class="fab fa-hackerrank"></i></a>
+        <a href="https://github.com/anjli20" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/anjali-gedam-4071ab181/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/anjali.gedam.56/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/anjli_20_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
     </div>
   </header>
-<script>
-  const slides = document.querySelectorAll(".slide");
-  let index = 0;
 
-  setInterval(() => {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-  }, 3000); // 3 seconds
-</script>
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    let sidx = 0;
+    setInterval(() => {
+      slides[sidx].classList.remove("active");
+      sidx = (sidx + 1) % slides.length;
+      slides[sidx].classList.add("active");
+    }, 3000);
+  </script>
 
-  <!-- ✅ Updated About Section -->
-  <section class="section" id="about">
-    <h2>P R O F I L E</h2>
+  <!-- ═══ HOME / ABOUT ═══ -->
+  <div class="page active" id="page-about">
     <div class="about-wrapper">
-      <div class="section-content">
-    <p style="text-align: justify;">
-      Hello! I am Anjali Gedam, a passionate and detail-driven Data Scientist and Software Developer with a background in data analytics, machine learning, and full-stack development. Recently completed my post graduation in Master’s in Data Science at the University of Glasgow, I combine technical expertise with a creative problem-solving mindset to build impactful, data-driven solutions.
-    </p>
-    <p style="text-align: justify;">
-      With hands-on experience in Python, SQL, Power BI, Tableau, AWS, and TensorFlow, I have worked on projects ranging from predictive modeling and generative AI to web development and information retrieval systems. My industry experience includes roles in data analytics, AI evaluation, and backend automation, where I contributed to real-world business insights and efficiency gains.
-    </p>
-    <p style="text-align: justify;">
-      Beyond academic and professional work, I have volunteered with Humari Pehchan NGO, served as a regional-level athlete, and led sports and cultural teams—bringing a unique blend of discipline, leadership, and creativity to everything I do.
-    </p>
-    <p style="text-align: justify;">
-      I’m passionate about ethical AI, scalable data systems, and leveraging technology for positive change. Whether it is solving complex data problems or designing user-friendly applications, I aim to create solutions that are both meaningful and efficient.
-    </p>
-  </div>
+      <div class="about-text">
+        <p class="greeting">Hi Everyone! 👋</p>
+        <br>
+        <p class="intro">I'm <strong>Anjali Gedam</strong>, a Data Scientist and Software Developer from the <strong>University of Glasgow</strong>. I specialize in Machine Learning, Deep Learning, NLP, and Generative AI — and love building things that turn complex data into real-world impact.</p>
+        <p class="activities-label">Apart from coding, some things I love to do:</p>
+        <ul class="activities">
+          <li>Exploring Cutting-edge AI &amp; Data Technologies</li>
+          <li>Building AI Agents &amp; Automation Tools</li>
+          <li>Athletics &amp; Sports</li>
+          <li>Volunteering &amp; Community Work</li>
+        </ul>
+      </div>
       <div class="about-image">
-        <img src="photo.jpg" alt="Anjali Gedam" />
+        <img src="photo.png" alt="Anjali Gedam" />
       </div>
     </div>
-  </section>
+  </div>
 
-
-
-
-  <section class="section" id="skills">
+  <!-- ═══ SKILLS ═══ -->
+  <div class="page" id="page-skills">
     <h2>S K I L L S</h2>
-    <div class="section-content">
-      <div class="skills-grid">
-        <div class="skills-column"><h3>Programming Languages</h3><p>Python, R, SQL, NoSQL, C, C++, HTML, CSS</p></div>
-        <div class="skills-column"><h3>Data Analysis</h3><p>Pandas, NumPy</p></div>
-        <div class="skills-column"><h3>Data Visualization</h3><p>Matplotlib, Seaborn, Plotly</p></div>
-        <div class="skills-column"><h3>Machine Learning</h3><p>Scikit-learn, XGBoost</p></div>
-        <div class="skills-column"><h3>Deep Learning</h3><p>TensorFlow, Keras, PyTorch</p></div>
-        <div class="skills-column"><h3>NLP</h3><p>spaCy, NLTK, Hugging Face</p></div>
-        <div class="skills-column"><h3>BI Tools</h3><p>Power BI, Tableau, Looker, Excel, Google Data Studio</p></div>
-        <div class="skills-column"><h3>Cloud & Big Data</h3><p>AWS, Azure, Snowflake</p></div>
-        <div class="skills-column"><h3>Databases</h3><p>MySQL, PostgreSQL</p></div>
-        <div class="skills-column"><h3>MLOps</h3><p>Airflow, MLflow</p></div>
-        <div class="skills-column"><h3>Information Retrieval</h3><p>BM25, ElasticSearch, PyTerrier</p></div>
-        <div class="skills-column"><h3>Professional Skills</h3><p>Teamwork, API Integration, Software Development</p></div>
-      </div>
-    </div>
-  </section>
 
-
-  <section class="section" id="education">
-  <h2>E D U C A T I O N</h2>
-  <div class="section-content">
-
-  <!-- MSc Data Science -->
-<div class="education-item" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
-  <div style="width: 100%;">
-    <h3 style="margin-bottom: 0.2rem;">Master of Science in Data Science</h3>
-    <div style="display: flex; justify-content: space-between; margin-bottom: 0.2rem;">
-      <p style="margin: 0;">University of Glasgow, United Kingdom</p>
-      <p style="margin: 0; text-align: right;"><em>Sep 2023 – Sep 2024</em></p>
-    </div>
-    <p style="color: #8b949e; font-size: 0.9rem; line-height: 1.3; ">
-      
-          Relevant Coursework: Data Analysis, Deep Learning, Machine Learning, Natural Language Processing (NLP), Generative AI, Information Visualization, Big Data, Information Retrieval, Software Development, Web Science, Human-Centered Security, Artificial Intelligence, Python, SQL, Web Scraping, Research Skills
-        </p>
-      </div>
-      
+    <p class="skills-section-heading">Programming Languages</p>
+    <div class="skills-icon-grid">
+      <div class="skill-pill"><i class="devicon-python-plain colored"></i> Python</div>
+      <div class="skill-pill"><i class="devicon-r-plain colored"></i> R</div>
+      <div class="skill-pill"><i class="devicon-azuresqldatabase-plain colored"></i> SQL</div>
+      <div class="skill-pill"><i class="devicon-c-plain colored"></i> C</div>
+      <div class="skill-pill"><i class="devicon-cplusplus-plain colored"></i> C++</div>
+      <div class="skill-pill"><i class="devicon-html5-plain colored"></i> HTML</div>
+      <div class="skill-pill"><i class="devicon-css3-plain colored"></i> CSS</div>
     </div>
 
-    <!-- B.Tech CSE -->
-<div class="education-item" style="display: flex; justify-content: space-between; flex-wrap: wrap; ">
-  <div style="width: 100%;">
-    <h3 style="margin-bottom: 0.2rem;">Bachelor of Technology in Information Technology</h3>
-    <div style="display: flex; justify-content: space-between; margin-bottom: 0.2rem;">
-      <p style="margin: 0;">Nagpur University, India</p>
-      <p style="margin: 0; text-align: right;"><em>Aug 2018 – Jul 2022</em></p>
-    </div>
-    <p style="color: #8b949e; font-size: 0.9rem; line-height: 1.3;">
-      
-      Relevant Coursework: Database Management System (DBMS), C, C++, SQL, Core Java, Python, MATLAB, Unix, Linux, Shell Scripting, Object-Oriented Programming (OOP), Object-Oriented Modelling (OOM), Web Development, Data Structures, Algorithm Design & Development, Artificial Intelligence (AI), Machine Learning (ML), Ethical Computing, Networking, Computer Architecture, Physics, Mathematics (Statistics, Probability, Calculus, Algebra), Civil Engineering Basics, Electrical Engineering Basics, Chemistry
-    </p>
-  </div>
-</div>
-
-
-    <!-- Class XII -->
-    <div class="education-item" style="display: flex; justify-content: space-between; flex-wrap: wrap; ">
-  <div style="width: 100%;">
-    <h3 style="margin-bottom: 0.2rem;">High School</h3>
-    <div style="display: flex; justify-content: space-between; margin-bottom: 0.2rem;">
-      <p style="margin: 0;">Kendriya Vidyalaya, India</p>
-      <p style="margin: 0; text-align: right;"><em>May 2018</em></p>
-    </div>
-    <p style="color: #8b949e; font-size: 0.9rem; line-height: 1.3;">
-      
-      Relevant Coursework: English, Hindi, Mathematics, Chemistry, Physics, Sanskrit, Social Science, Computer Science, SQL, Networking, Biology
-    </p>
-  </div>
-</div>
-
-
-  </div>
-</section>
-
-  <section class="section" id="certifications">
-  <h2>C E R T I F I C A T I O N S</h2>
-  <div class="section-content">
-    <ul style="list-style: none; padding: 0;">
-      <li style="margin-bottom: 1.5rem;">
-        <strong>Python</strong><br/>
-        <div style="display: flex; justify-content: space-between;">
-          <span>NPTEL – Indian Institute of Technology Madras, India</span>
-          <span><em>Jul 2021 – Sep 2021</em></span>
-        </div>
-      </li>
-
-      <li style="margin-bottom: 1.5rem;">
-        <strong>Data Science</strong><br/>
-        <div style="display: flex; justify-content: space-between;">
-          <span>NPTEL – Indian Institute of Technology Madras, India</span>
-          <span><em>Jul 2021 – Aug 2021</em></span>
-        </div>
-      </li>
-
-      <li>
-        <strong>Data Scientist Master’s Program</strong><br/>
-        <div style="display: flex; justify-content: space-between;">
-          <span>Simplilearn (in collaboration with IBM)</span>
-          <span><em>Aug 2022 – Jan 2024</em></span>
-          
-        </div>
-      </li>
-    </ul>
-    <p style="color: #8b949e; font-size: 0.9rem; line-height: 1.3; margin: 0;">
-      Relevant Coursework: Python, Data Science, Machine Learning, Deep Learning, Keras, TensorFlow, SQL, R Programming, Tableau, Capstone Project, Mathematics, Statistics, Algebra, Probability
-    </p>
-  </div>
-</section>
-
-
-
-  <section id="projects">
-  <h2>P R O J E C T S</h2>
-  <div class="projects-grid">
-
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          Online Book & Magazine Management Systems
-        </div>
-        <div class="flip-card-back">
-          <p><strong>HTML, CSS, JavaScript, PHP, Bootstrap</strong> <br><br>
-          Developed user login, PDF downloads, and admin panels for digital library platforms.</p>
-        </div>
-      </div>
+    <p class="skills-section-heading">Data Analysis & Visualisation</p>
+    <div class="skills-icon-grid">
+      <div class="skill-pill"><i class="devicon-pandas-plain colored"></i> Pandas</div>
+      <div class="skill-pill"><i class="devicon-numpy-plain colored"></i> NumPy</div>
+      <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-plain.svg" alt="Matplotlib"/> Matplotlib</div>
+      <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg" alt="Plotly"/> Plotly</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/tableau-software.png" alt="Tableau"/> Tableau</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI"/> Power BI</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" alt="Excel"/> Excel</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/google-data-studio.png" alt="Looker Studio"/> Looker Studio</div>
     </div>
 
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          Secure Data Deduplication Platform
-        </div>
-        <div class="flip-card-back">
-          <p><strong>Python</strong><br><br>
-          File deduplication system with hashing & encryption for secure, efficient storage.</p>
-        </div>
-      </div>
+    <p class="skills-section-heading">Machine Learning & Deep Learning</p>
+    <div class="skills-icon-grid">
+      <div class="skill-pill"><i class="devicon-scikitlearn-plain colored"></i> Scikit-learn</div>
+      <div class="skill-pill"><i class="devicon-tensorflow-original colored"></i> TensorFlow</div>
+      <div class="skill-pill"><i class="devicon-keras-plain colored"></i> Keras</div>
+      <div class="skill-pill"><i class="devicon-pytorch-plain colored"></i> PyTorch</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="XGBoost"/> XGBoost</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="Seaborn"/> Seaborn</div>
     </div>
 
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          FairRank – Fairness-Aware Re-Ranking
-        </div>
-        <div class="flip-card-back">
-          <p><strong>PyTerrier, Python, ELECTRA, BM25</strong><br><br>
-          Re-ranked search results on TREC dataset to enhance fairness.</p>
-        </div>
-      </div>
+    <p class="skills-section-heading">NLP & Generative AI</p>
+    <div class="skills-icon-grid">
+      <div class="skill-pill"><img src="https://upload.wikimedia.org/wikipedia/commons/8/88/SpaCy_logo.svg" alt="spaCy"/> spaCy</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/natural-language-processing.png" alt="NLTK"/> NLTK</div>
+      <div class="skill-pill"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face"/> Hugging Face</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/chatgpt.png" alt="LLMs"/> LLMs / GPT</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/bot.png" alt="AI Agents"/> AI Agents</div>
     </div>
 
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          Big Data Text Search Engine
-        </div>
-        <div class="flip-card-back">
-          <p><strong>Apache Spark, Java</strong><br><br>
-          Built scalable text ranking engine using Spark DPH models.</p>
-        </div>
-      </div>
+    <p class="skills-section-heading">Cloud & Big Data</p>
+    <div class="skills-icon-grid">
+      <div class="skill-pill"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</div>
+      <div class="skill-pill"><i class="devicon-azure-plain colored"></i> Azure</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/snowflake.png" alt="Snowflake"/> Snowflake</div>
     </div>
 
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          Histopathological Image Clustering
-        </div>
-        <div class="flip-card-back">
-          <p><strong>ResNet50, PathologyGAN, PCA, UMAP</strong><br><br>
-          Cancer image clustering with K-Means, GMM, Louvain, silhouette score.</p>
-        </div>
-      </div>
+    <p class="skills-section-heading">Databases</p>
+    <div class="skills-icon-grid">
+      <div class="skill-pill"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+      <div class="skill-pill"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
+      <div class="skill-pill"><i class="devicon-mongodb-plain colored"></i> MongoDB</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/sql.png" alt="NoSQL"/> NoSQL</div>
     </div>
 
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          EEG-Based Neuropathic Pain Prediction
-        </div>
-        <div class="flip-card-back">
-          <p><strong> SVM, KNN, PCA</strong><br><br>
-          Used EEG features with ML and regularization for pain detection.</p>
-        </div>
-      </div>
+    <p class="skills-section-heading">MLOps</p>
+    <div class="skills-icon-grid">
+      <div class="skill-pill"><i class="devicon-apacheairflow-plain colored"></i> Airflow</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/flow-chart.png" alt="MLflow"/> MLflow</div>
+      <div class="skill-pill"><i class="devicon-docker-plain colored"></i> Docker</div>
+      <div class="skill-pill"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</div>
     </div>
 
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          Data Visualization with Altair
-        </div>
-        <div class="flip-card-back">
-          <p><strong>Python, Altair</strong><br><br>
-          Built dashboards on US Accidents data with filters and metrics.</p>
-        </div>
-      </div>
-    </div>
+    <p class="skills-section-heading">Tools & Environment</p>
+    <div class="skills-icon-grid">
+      <div class="skill-pill"><i class="devicon-git-plain colored"></i> Git</div>
+      <div class="skill-pill"><i class="devicon-github-original colored"></i> GitHub</div>
+      <div class="skill-pill"><i class="devicon-jupyter-plain colored"></i> Jupyter</div>
+      <div class="skill-pill"><i class="devicon-vscode-plain colored"></i> VS Code</div>
+      <div class="skill-pill"><i class="devicon-anaconda-original colored"></i> Anaconda</div>
+      <div class="skill-pill"><img src="https://img.icons8.com/color/48/google-colab.png" alt="Google Colab"/> Google Colab</div>
 
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          COVID-19 Time Series Forecasting
-        </div>
-        <div class="flip-card-back">
-          <p><strong>Python, Facebook Prophet</strong><br><br>
-          Forecasted COVID trends with Prophet and visualizations.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          Protein Secondary Structure Prediction
-        </div>
-        <div class="flip-card-back">
-          <p><strong>PyTorch, FCN, Captum</strong><br><br>
-          Built interpretable FCN with PSSM inputs and Ray Tune optimization.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          Geo-Spatial Twitter Data Analysis
-        </div>
-        <div class="flip-card-back">
-          <p><strong> Python</strong><br><br>
-          Geo-tagged tweet classification using spatial bins and ML models.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          ShareBike EV Rental Management
-        </div>
-        <div class="flip-card-back">
-          <p><strong>Python (Tkinter), SQLite</strong><br><br>
-          Built EV rental desktop app with login, fare calculation and booking features.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          Thermal & Shoulder Surfing Attack Study
-        </div>
-        <div class="flip-card-back">
-          <p><strong> Python(matplotlib), Research</strong><br><br>
-          Studied mobile security threats using thermal imagery and observational analysis.</p>
-        </div>
-      </div>
     </div>
 
   </div>
-</section>
+  <!-- ═══ END SKILLS ═══ -->
 
-  <footer>
-    <p>&copy; 2025 Anjali Gedam | All rights reserved.</p>
-  </footer>
+  <!-- ═══ EXPERIENCE ═══ -->
+  <div class="page" id="page-experience">
+    <h2>E X P E R I E N C E</h2>
+
+    <p class="exp-group-label">Data &amp; Tech Experience</p>
+    <div class="exp-grid">
+
+      <div class="exp-card">
+        <img class="exp-logo" src="anish.png" alt="Anishree Technologies"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+        <div class="exp-logo-placeholder" style="display:none;"><i class="fas fa-building"></i></div>
+        <div class="exp-info">
+          <p class="exp-role">Analyst</p>
+          <p class="exp-company">Anishree Technologies LLP</p>
+          <p class="exp-desc">Delivering data analysis and automation solutions remotely, applying Python, SQL, and ML techniques to support business intelligence and reporting workflows.</p>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <img class="exp-logo" src="sl.jpg" alt="Saint Louis University"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+        <div class="exp-logo-placeholder" style="display:none;"><i class="fas fa-university"></i></div>
+        <div class="exp-info">
+          <p class="exp-role">Data Visualization Analyst · Internship</p>
+          <p class="exp-company">Saint Louis University</p>
+          <p class="exp-desc">Built interactive dashboards and visual reports for academic datasets, translating complex data into clear narratives for research decision-making.</p>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <img class="exp-logo" src="ssit.jpg" alt="SSIT Pvt Ltd"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+        <div class="exp-logo-placeholder" style="display:none;"><i class="fas fa-chart-bar"></i></div>
+        <div class="exp-info">
+          <p class="exp-role">Data Analyst</p>
+          <p class="exp-company">SSIT Pvt Ltd Nagpur</p>
+          <p class="exp-desc">Conducted data cleaning, exploratory analysis, and ML model development to generate business insights and support data-driven decision-making.</p>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <img class="exp-logo" src="ssit.jpg" alt="SSiT Education"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+        <div class="exp-logo-placeholder" style="display:none;"><i class="fas fa-code"></i></div>
+        <div class="exp-info">
+          <p class="exp-role">Web Development Intern</p>
+          <p class="exp-company">SSiT Education &amp; Software Services Pvt. Ltd.</p>
+          <p class="exp-desc">Developed and styled web pages using HTML and CSS, gaining hands-on experience in responsive design and front-end development practices.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="exp-group-label">Other Experience</p>
+    <div class="exp-grid">
+
+      <div class="exp-card">
+        <img class="exp-logo" src="Mcd.jpg" alt="McDonald's"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+        <div class="exp-logo-placeholder" style="display:none;"><i class="fas fa-hamburger"></i></div>
+        <div class="exp-info">
+          <p class="exp-role">Customer Care Assistant · Part-time</p>
+          <p class="exp-company">McDonald's</p>
+          <p class="exp-desc">Delivered fast, accurate customer service during peak hours while supporting team operations and maintaining high service standards on-site in Glasgow.</p>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <img class="exp-logo" src="hp.jpg" alt="Hamari Pahchan NGO"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+        <div class="exp-logo-placeholder" style="display:none;"><i class="fas fa-hands-helping"></i></div>
+        <div class="exp-info">
+          <p class="exp-role">Fundraiser · Volunteer</p>
+          <p class="exp-company">Hamari Pahchan NGO</p>
+          <p class="exp-desc">Planned and managed community donation drives — collecting books, clothing, and essentials to support underprivileged individuals across social welfare initiatives.</p>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <img class="exp-logo" src="rmhc.avif" alt="RMHC UK"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+        <div class="exp-logo-placeholder" style="display:none;"><i class="fas fa-heart"></i></div>
+        <div class="exp-info">
+          <p class="exp-role">Fundraiser · Volunteer</p>
+          <p class="exp-company">Ronald McDonald House Charities UK</p>
+          <p class="exp-desc">Raised funds to support RMHC UK, helping families stay close to their seriously ill children by providing free accommodation near hospitals across the UK.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ═══ END EXPERIENCE ═══ -->
+
+  <!-- ═══ EDUCATION ═══ -->
+  <div class="page" id="page-education">
+    <h2>E D U C A T I O N</h2>
+    <div class="cert-grid">
+
+      <div class="cert-card">
+        <div class="cert-image-wrap">
+          <img src="uofg.jpg" alt="Graduation – University of Glasgow"/>
+        </div>
+        <div class="cert-body">
+          <p class="cert-title">Master of Science in Data Science</p>
+          <p class="cert-issuer">University of Glasgow, United Kingdom</p>
+          <p class="cert-date">Sep 2023 – Sep 2024</p>
+          <p class="cert-coursework">Relevant Coursework: Data Analysis, Deep Learning, Machine Learning, NLP, Generative AI, Information Visualization, Big Data, Information Retrieval, Software Development, Web Science, Human-Centered Security, Artificial Intelligence, Python, SQL, Web Scraping, Research Skills</p>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-image-wrap">
+          <img src="dmietr.jpg" alt="BTech – Nagpur University"/>
+        </div>
+        <div class="cert-body">
+          <p class="cert-title">Bachelor of Technology in Information Technology</p>
+          <p class="cert-issuer">Nagpur University, India</p>
+          <p class="cert-date">Aug 2018 – Jul 2022</p>
+          <p class="cert-coursework">Relevant Coursework: DBMS, C, C++, SQL, Core Java, Python, MATLAB, Unix, Linux, Shell Scripting, OOP, OOM, Web Development, Data Structures, Algorithm Design & Development, AI, Machine Learning, Ethical Computing, Networking, Computer Architecture, Mathematics, Physics, Chemistry</p>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-image-wrap">
+          <img src="kv.jpg" alt="High School – Kendriya Vidyalaya"/>
+        </div>
+        <div class="cert-body">
+          <p class="cert-title">High School (Class XII)</p>
+          <p class="cert-issuer">Kendriya Vidyalaya, India</p>
+          <p class="cert-date">May 2018</p>
+          <p class="cert-coursework">Relevant Coursework: English, Hindi, Mathematics, Chemistry, Physics, Sanskrit, Social Science, Computer Science, SQL, Networking, Biology</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ═══ END EDUCATION ═══ -->
+
+  <!-- ═══ CERTIFICATIONS ═══ -->
+  <div class="page" id="page-certifications">
+    <h2>C E R T I F I C A T I O N S</h2>
+    <div class="cert-grid">
+
+      <div class="cert-card">
+        <div class="cert-image-wrap">
+          <img src="NPTEL-PDS.jpg" alt="Python for Data Science – NPTEL"/>
+        </div>
+        <div class="cert-body">
+          <p class="cert-title">Python for Data Science</p>
+          <p class="cert-issuer">NPTEL – Indian Institute of Technology Madras</p>
+          <p class="cert-date">Jul 2021 – Aug 2021</p>
+          <p class="cert-coursework">Relevant Coursework: Introduction to Python, Spyder IDE, Variables & Data Types, Operators, Lists, Tuples, Dictionaries, Sets, NumPy, Matrix Operations, Linear Algebra, Classification Case Study, Regression Case Study</p>
+          <p style="font-size:0.85rem;color:#c9d1d9;margin:0.4rem 0 0;">Roll No: NPTEL21CS78S23980851</p>
+          <a href="https://nptel.ac.in/noc" target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.4rem;font-size:0.9rem;color:#58a6ff;font-weight:600;">
+            <i class="fas fa-shield-alt"></i> Verify Certificate
+          </a>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-image-wrap">
+          <img src="NPTEL-DSE.jpg" alt="Data Science for Engineers – NPTEL"/>
+        </div>
+        <div class="cert-body">
+          <p class="cert-title">Data Science for Engineers</p>
+          <p class="cert-issuer">NPTEL – Indian Institute of Technology Madras</p>
+          <p class="cert-date">Jul 2021 – Sep 2021</p>
+          <p class="cert-coursework">Relevant Coursework: R Programming, Linear Algebra, Descriptive Statistics, Probability Distributions, Hypothesis Testing, Confidence Intervals, Optimization, Data Science Problem-Solving Framework, Linear & Logistic Regression, k-NN Classification, k-Means Clustering</p>
+          <p style="font-size:0.85rem;color:#c9d1d9;margin:0.4rem 0 0;">Roll No: NPTEL21CS69S13980124</p>
+          <a href="https://nptel.ac.in/noc" target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.4rem;font-size:0.9rem;color:#58a6ff;font-weight:600;">
+            <i class="fas fa-shield-alt"></i> Verify Certificate
+          </a>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-image-wrap">
+          <img src="simplilearn-data scientist.jpg" alt="Data Scientist Master's – Simplilearn"/>
+        </div>
+        <div class="cert-body">
+          <p class="cert-title">Data Scientist Master's Program</p>
+          <p class="cert-issuer">Simplilearn (in collaboration with IBM)</p>
+          <p class="cert-date">Aug 2022 – Jan 2024</p>
+          <p class="cert-coursework">Relevant Coursework: Python, Data Science, Machine Learning, Deep Learning, Keras, TensorFlow, SQL, R Programming, Tableau, Capstone Project, Mathematics, Statistics, Algebra, Probability</p>
+          <p style="font-size:0.85rem;color:#c9d1d9;margin:0.4rem 0 0;">Certificate ID: 92580325</p>
+          <a href="https://success.simplilearn.com/9cbd558b-5fe5-4e4b-ba25-4500e440eaba" target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.4rem;font-size:0.9rem;color:#58a6ff;font-weight:600;">
+            <i class="fas fa-shield-alt"></i> Verify Certificate
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ═══ END CERTIFICATIONS ═══ -->
+
+  <!-- ═══ PROJECTS ═══ -->
+  <div class="page" id="page-projects">
+    <h2>P R O J E C T S</h2>
+    <div class="projects-grid">
+
+      <a class="project-card" href="https://github.com/anjli20/cifar10_CNN_classification" target="_blank" rel="noopener">
+        <div class="project-card-header"><i class="fas fa-code-branch"></i><p class="project-title">CIFAR-10 CNN Image Classification</p></div>
+        <p class="project-desc">Deep CNN built from scratch in TensorFlow/Keras achieving 86% test accuracy. Features Batch Normalisation, Dropout, Data Augmentation, and adaptive learning rate scheduling.</p>
+        <div class="project-footer">
+          <div class="project-tags"><span class="project-tag">TensorFlow</span><span class="project-tag">Keras</span><span class="project-tag">CNN</span><span class="project-tag">Python</span></div>
+          <span class="project-gh-link"><i class="fab fa-github"></i> View on GitHub</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/anjli20/Advanced_feature_selection_wine_classification" target="_blank" rel="noopener">
+        <div class="project-card-header"><i class="fas fa-code-branch"></i><p class="project-title">Advanced Feature Selection – Wine Classification</p></div>
+        <p class="project-desc">Feature selection pipeline comparing Variance Threshold, Mutual Information, RFE, correlation filtering, and model-based importance using a Gradient Boosting classifier.</p>
+        <div class="project-footer">
+          <div class="project-tags"><span class="project-tag">Scikit-learn</span><span class="project-tag">XGBoost</span><span class="project-tag">Python</span><span class="project-tag">ML</span></div>
+          <span class="project-gh-link"><i class="fab fa-github"></i> View on GitHub</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/anjli20/anime-faces" target="_blank" rel="noopener">
+        <div class="project-card-header"><i class="fas fa-code-branch"></i><p class="project-title">Anime Face Generation – DCGAN</p></div>
+        <p class="project-desc">A Deep Convolutional GAN trained on 63,000+ anime face images — 100 epochs of adversarial training with a temperature-free latent space.</p>
+        <div class="project-footer">
+          <div class="project-tags"><span class="project-tag">GAN</span><span class="project-tag">PyTorch</span><span class="project-tag">Deep Learning</span><span class="project-tag">Python</span></div>
+          <span class="project-gh-link"><i class="fab fa-github"></i> View on GitHub</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/anjli20/framingham-chd-risk-prediction" target="_blank" rel="noopener">
+        <div class="project-card-header"><i class="fas fa-code-branch"></i><p class="project-title">Framingham CHD Risk Prediction</p></div>
+        <p class="project-desc">End-to-end ML pipeline for 10-year coronary heart disease risk prediction using the Framingham Heart Study dataset, benchmarked against the clinical Framingham Risk Score.</p>
+        <div class="project-footer">
+          <div class="project-tags"><span class="project-tag">Scikit-learn</span><span class="project-tag">Python</span><span class="project-tag">Healthcare ML</span></div>
+          <span class="project-gh-link"><i class="fab fa-github"></i> View on GitHub</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/anjli20/Fully-Convolutional-PyTorch-Model-to-Predict-Protein-Secondary-Structure" target="_blank" rel="noopener">
+        <div class="project-card-header"><i class="fas fa-code-branch"></i><p class="project-title">Protein Secondary Structure Prediction</p></div>
+        <p class="project-desc">Fully Convolutional Network (FCN) in PyTorch with PSSM inputs, Captum interpretability, and Ray Tune optimisation — University of Glasgow Kaggle competition.</p>
+        <div class="project-footer">
+          <div class="project-tags"><span class="project-tag">PyTorch</span><span class="project-tag">FCN</span><span class="project-tag">Captum</span><span class="project-tag">Python</span></div>
+          <span class="project-gh-link"><i class="fab fa-github"></i> View on GitHub</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/anjli20/Retail-Sales-SQL-Project" target="_blank" rel="noopener">
+        <div class="project-card-header"><i class="fas fa-code-branch"></i><p class="project-title">Retail Sales SQL Analysis</p></div>
+        <p class="project-desc">End-to-end retail sales analysis in PostgreSQL — database setup, data cleaning, feature engineering, and 17 business queries using window functions and CTEs.</p>
+        <div class="project-footer">
+          <div class="project-tags"><span class="project-tag">PostgreSQL</span><span class="project-tag">SQL</span><span class="project-tag">Data Analysis</span></div>
+          <span class="project-gh-link"><i class="fab fa-github"></i> View on GitHub</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/anjli20/portfolio" target="_blank" rel="noopener">
+        <div class="project-card-header"><i class="fas fa-code-branch"></i><p class="project-title">Personal Portfolio Website</p></div>
+        <p class="project-desc">Responsive personal portfolio built with HTML and CSS showcasing profile, education, skills, projects, and certifications. Deployed via GitHub Pages.</p>
+        <div class="project-footer">
+          <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">GitHub Pages</span></div>
+          <span class="project-gh-link"><i class="fab fa-github"></i> View on GitHub</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/anjli20/auto-job-apply-agent" target="_blank" rel="noopener">
+        <div class="project-card-header"><i class="fas fa-code-branch"></i><p class="project-title">Auto Job Apply Agent – Claude AI</p></div>
+        <p class="project-desc">AI agent that automates the end-to-end job application process — scrapes listings, tailors CVs and cover letters per role using Claude (Anthropic), and auto-submits applications.</p>
+        <div class="project-footer">
+          <div class="project-tags"><span class="project-tag">Claude API</span><span class="project-tag">AI Agent</span><span class="project-tag">Python</span><span class="project-tag">Automation</span></div>
+          <span class="project-gh-link"><i class="fab fa-github"></i> View on GitHub</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/anjli20?tab=repositories" target="_blank" rel="noopener" style="border-style:dashed;opacity:0.65;">
+        <div class="project-card-header"><i class="fas fa-plus-circle"></i><p class="project-title">39+ More Projects on GitHub</p></div>
+        <p class="project-desc">Browse all repositories — spanning data science, machine learning, deep learning, NLP, computer vision, SQL, and web development.</p>
+        <div class="project-footer">
+          <div class="project-tags"><span class="project-tag">39+ Repos</span></div>
+          <span class="project-gh-link"><i class="fab fa-github"></i> View All</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+  <!-- ═══ END PROJECTS ═══ -->
+
+  <footer><p>&copy; 2025 Anjali Gedam | All rights reserved.</p></footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img id="lightboxImg" src="" alt=""/>
+  </div>
+
+  <script>
+    // ── SPA Navigation ──
+    const navLinks = document.querySelectorAll(".nav-link");
+    const pages    = document.querySelectorAll(".page");
+
+    function showPage(pageId) {
+      pages.forEach(p => p.classList.remove("active"));
+      navLinks.forEach(a => a.classList.remove("active"));
+      document.getElementById("page-" + pageId).classList.add("active");
+      document.querySelector('[data-page="' + pageId + '"]').classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => showPage(link.dataset.page));
+    });
+
+    // ── Lightbox ──
+    const lightbox    = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lbClose     = document.getElementById("lightboxClose");
+
+    document.querySelectorAll(".cert-image-wrap").forEach(wrap => {
+      wrap.addEventListener("click", () => {
+        const img = wrap.querySelector("img");
+        if (!img) return;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox || e.target === lbClose) closeLightbox();
+    });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeLightbox();
+    });
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+  </script>
+
 </body>
 </html>
-
