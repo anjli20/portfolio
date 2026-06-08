@@ -13,11 +13,128 @@
   h2 { color:#58a6ff; border-bottom:1px solid #30363d; padding-bottom:0.4rem; font-size:1.6rem; margin-bottom:1.4rem; }
 
   /* ── Nav ── */
-  nav { background-color:#161b22; padding:1rem; position:sticky; top:0; z-index:1000; }
-  nav ul { list-style:none; display:flex; flex-wrap:wrap; margin:0; padding:0; }
-  nav li { margin-right:1.5rem; }
-  nav a { font-weight:bold; font-size:1rem; color:#c9d1d9; padding:0.3rem 0.5rem; border-radius:5px; transition:color 0.2s, background 0.2s; cursor:pointer; display:inline-block; }
+  nav { background-color:#161b22; padding:0.75rem 1rem; position:sticky; top:0; z-index:1000; }
+  .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+  .nav-brand { font-family:'Copperplate','Copperplate Gothic Light',fantasy; font-weight:bold; color:#58a6ff; font-size:1rem; letter-spacing:0.05em; white-space:nowrap; }
+
+  /* Hamburger button — mobile only */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #c9d1d9;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .nav-toggle:hover span { background: #58a6ff; }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    gap: 0.2rem;
+  }
+  nav li { margin: 0; }
+  nav a { font-weight:bold; font-size:0.92rem; color:#c9d1d9; padding:0.3rem 0.6rem; border-radius:5px; transition:color 0.2s, background 0.2s; cursor:pointer; display:inline-block; white-space:nowrap; }
   nav a:hover, nav a.active { color:#58a6ff; background:rgba(88,166,255,0.1); }
+
+  /* Mobile nav */
+  @media(max-width:640px) {
+    .nav-toggle { display:flex; }
+    .nav-brand { display:block; }
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 0.6rem;
+      gap: 0;
+      border-top: 1px solid #30363d;
+      padding-top: 0.5rem;
+    }
+    nav ul.open { display:flex; }
+    nav li { width: 100%; }
+    nav a { display:block; padding:0.6rem 0.5rem; font-size:1rem; border-radius:6px; }
+  }
+
+  /* ── Header — only shown on Home ── */
+  header {
+    text-align: center;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/032/307/552/non_2x/ai-ai-generated-abstract-blue-background-with-intricate-network-grid-perfect-for-modern-tech-concepts-digital-elegance-in-a-vibrant-design-free-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    color: white;
+    transition: height 0.3s ease, opacity 0.3s ease;
+  }
+  /* Zoom + brighten on header hover */
+  header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+    filter: brightness(1.15) saturate(1.2);
+    transform: scale(1.04);
+  }
+  header:hover::after { opacity: 1; }
+  header.hidden { height:0; opacity:0; overflow:hidden; pointer-events:none; }
+  header::before { content:""; position:absolute; top:0; left:0; height:100%; width:100%; z-index:0; }
+  .header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 22px;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    transition: background-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 0.5rem;
+  }
+  header:hover .header-content { background-color: rgba(0,0,0,0.25); }
+  .header-content h1 {
+    font-family:'Copperplate','Copperplate Gothic Light',fantasy;
+    font-weight:bold; color:white;
+    font-size: clamp(1.4rem, 5vw, 3rem);
+    margin:0 0 0.2rem;
+    white-space: nowrap;
+  }
+  .header-content h3 {
+    font-family:'Copperplate','Copperplate Gothic Light',fantasy;
+    font-weight:bold; color:white;
+    font-size: clamp(1rem, 3.5vw, 1.8rem);
+    margin:0 0 0.6rem;
+    white-space: nowrap;
+  }
+  .social-icons { display:flex; align-items:center; justify-content:center; flex-wrap:nowrap; gap:0.2rem; }
+  .social-icons a { padding:0 8px; color:#ffffff; font-size:clamp(1.1rem,4vw,1.5rem); line-height:1; transition:color 0.2s, transform 0.2s; display:inline-block; margin:0; }
+  .social-icons a:hover { color:#58a6ff; transform:scale(1.25); }
+  @media(max-width:480px) {
+    header { height: 200px; }
+    .header-content h1 { font-size: clamp(1.2rem, 6vw, 2rem); letter-spacing: 0.1em; }
+    .header-content h3 { font-size: clamp(0.9rem, 4vw, 1.3rem); }
+    .social-icons a { font-size: 1.2rem; padding: 0 6px; }
+  }
 
   /* ── Header — only shown on Home ── */
   header {
@@ -89,8 +206,8 @@
   /* Profile image — nudged down + right, hover glow + scale */
   .about-image {
     flex: 0 0 auto;
-    margin-top: 2rem;
-    margin-left: 1rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
     align-self: center;
   }
   .about-image img {
@@ -175,14 +292,20 @@
 <body>
 
   <nav>
-    <ul>
-      <li><a class="nav-link active" data-page="about">Home</a></li>
-      <li><a class="nav-link" data-page="skills">Skills</a></li>
-      <li><a class="nav-link" data-page="experience">Experience</a></li>
-      <li><a class="nav-link" data-page="education">Education</a></li>
-      <li><a class="nav-link" data-page="certifications">Certifications</a></li>
-      <li><a class="nav-link" data-page="projects">Projects</a></li>
-    </ul>
+    <div class="nav-inner">
+      <span class="nav-brand">A G</span>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="navMenu">
+        <li><a class="nav-link active" data-page="about">Home</a></li>
+        <li><a class="nav-link" data-page="skills">Skills</a></li>
+        <li><a class="nav-link" data-page="experience">Experience</a></li>
+        <li><a class="nav-link" data-page="education">Education</a></li>
+        <li><a class="nav-link" data-page="certifications">Certifications</a></li>
+        <li><a class="nav-link" data-page="projects">Projects</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Header: visible only on Home page -->
@@ -602,23 +725,28 @@
   </div>
 
   <script>
+    // ── Hamburger toggle ──
+    const navToggle = document.getElementById("navToggle");
+    const navMenu   = document.getElementById("navMenu");
+    navToggle.addEventListener("click", () => navMenu.classList.toggle("open"));
+
     const siteHeader = document.getElementById("site-header");
     const navLinks   = document.querySelectorAll(".nav-link");
     const pages      = document.querySelectorAll(".page");
 
     function showPage(pageId) {
-      // show/hide header based on page
       if (pageId === "about") {
         siteHeader.classList.remove("hidden");
       } else {
         siteHeader.classList.add("hidden");
       }
-
       pages.forEach(p => p.classList.remove("active"));
       navLinks.forEach(a => a.classList.remove("active"));
       document.getElementById("page-" + pageId).classList.add("active");
       document.querySelector('[data-page="' + pageId + '"]').classList.add("active");
       window.scrollTo({ top: 0, behavior: "smooth" });
+      // close mobile menu after selection
+      navMenu.classList.remove("open");
     }
 
     navLinks.forEach(link => {
