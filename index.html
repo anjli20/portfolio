@@ -118,6 +118,7 @@
     font-size: clamp(1.4rem, 5vw, 3rem);
     margin:0 0 0.2rem;
     white-space: nowrap;
+    letter-spacing: clamp(0.05em, 1vw, 0.18em);
   }
   .header-content h3 {
     font-family:'Copperplate','Copperplate Gothic Light',fantasy;
@@ -125,15 +126,16 @@
     font-size: clamp(1rem, 3.5vw, 1.8rem);
     margin:0 0 0.6rem;
     white-space: nowrap;
+    letter-spacing: clamp(0.03em, 0.8vw, 0.12em);
   }
   .social-icons { display:flex; align-items:center; justify-content:center; flex-wrap:nowrap; gap:0.2rem; }
   .social-icons a { padding:0 8px; color:#ffffff; font-size:clamp(1.1rem,4vw,1.5rem); line-height:1; transition:color 0.2s, transform 0.2s; display:inline-block; margin:0; }
   .social-icons a:hover { color:#58a6ff; transform:scale(1.25); }
   @media(max-width:480px) {
-    header { height: 200px; }
-    .header-content h1 { font-size: clamp(1.2rem, 6vw, 2rem); letter-spacing: 0.1em; }
-    .header-content h3 { font-size: clamp(0.9rem, 4vw, 1.3rem); }
-    .social-icons a { font-size: 1.2rem; padding: 0 6px; }
+    header { height: 185px; }
+    .header-content h1 { font-size: clamp(1.1rem, 7.5vw, 1.8rem); letter-spacing: 0.06em; }
+    .header-content h3 { font-size: clamp(0.85rem, 4.5vw, 1.2rem); letter-spacing: 0.04em; }
+    .social-icons a { font-size: 1.2rem; padding: 0 5px; }
   }
 
   /* ── Header — only shown on Home ── */
@@ -311,9 +313,9 @@
   <!-- Header: visible only on Home page -->
   <header id="site-header">
     <div class="header-content">
-      <h1>A N J A L I &nbsp;&nbsp; G E D A M</h1>
+      <h1>ANJALI &nbsp; GEDAM</h1>
       <br>
-      <h3>D A T A &nbsp; S C I E N T I S T</h3>
+      <h3>DATA &nbsp; SCIENTIST</h3>
       <br>
       <div class="social-icons">
         <a href="https://www.hackerrank.com/profile/anjaligedam05" target="_blank" title="HackerRank"><i class="fab fa-hackerrank"></i></a>
